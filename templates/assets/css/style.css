@@ -1,3 +1,4 @@
+/* 공통영역 */
 body {
   width: 100vw;
   height: 100vh;
@@ -20,6 +21,7 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
 }
 
+/* welcome page 영역 */
 .welcome-page-area .item1-area .item1 {
   position: absolute;
   top: 50%;
