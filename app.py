@@ -9,14 +9,17 @@ db = client.dbmulbono
 from flask import Flask
 app = Flask(__name__)
 
+# index 페이지 조회 API
 @app.route('/index')
 def main():
     return 'This is Home!'
 
+# 방명록 조회 API
 @app.route('/index/guest-book', methods=["GET"])
 def get_guest_book():
     return 'This is Home!'
 
+# 방명록 작성 API
 @app.route('/index/guest-book', methods=["POST"])
 def write_guest_book():
     return 'This is Home!'
