@@ -1,0 +1,95 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.welcome-page-area {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/welcome-page3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.welcome-page-area .item1-area .item1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 500px), calc(-50% - 10px));
+  width: 400px;
+  height: auto;
+}
+
+.welcome-page-area .item1-mind-speech-bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 100px), calc(-50% + 300px)) scaleY(-1);
+}
+
+.welcome-page-area .item1-area .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 100px), calc(-50% + 300px));
+  font-size: 36px;
+}
+
+.welcome-page-area .item1-area .text .point-color {
+  color: #fff;
+  text-shadow: 0 2px #000, 0 -2px #000, 2px 0 #000, -2px 0 #000;
+}
+
+.welcome-page-area .start-guide-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 850px;
+  font-size: 70px;
+  line-height: 1.3em;
+  font-weight: bolder;
+  word-break: break-all;
+  color: #ff0000;
+  text-shadow: 0 2px 2px #FF0000, -2px 5px 0 #ff7f00, -4px 10px 0 #ffff00, -8px 15px 0 #00ff00, -12px 20px 0 #0000ff, -16px 25px 0 #4b0082, -20px 30px 0 #9400d3;
+}
+
+.welcome-page-area .impact-speech-bubble-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 490px), calc(-50% - 100px)) rotate(-20deg);
+  width: 500px;
+  height: 350px;
+}
+
+.welcome-page-area .impact-speech-bubble-area .impact-speech-bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 350px;
+}
+
+.welcome-page-area .impact-speech-bubble-area .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ffff00;
+  text-shadow: 3px 3px 10px #000;
+}
+
+.team-introduce-area {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team-introduce-area .team-title {
+  padding: 100px;
+}
