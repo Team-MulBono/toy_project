@@ -134,7 +134,7 @@ body::-webkit-scrollbar {
 }
 
 /* team introduce page 영역 */
-.team-introduce-area {
+.project-introduce-area {
   width: 100vw;
   height: 100vh;
   background: url(../images/default-bono.jpeg);
@@ -142,7 +142,7 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
 }
 
-.team-introduce-area .title {
+.project-introduce-area .title {
   position: fixed;
   top: 0;
   left: 50%;
@@ -153,7 +153,7 @@ body::-webkit-scrollbar {
   white-space: nowrap;
 }
 
-.team-introduce-area .sub-title {
+.project-introduce-area .sub-title {
   position: fixed;
   top: 20%;
   left: 50%;
@@ -164,7 +164,7 @@ body::-webkit-scrollbar {
   white-space: nowrap;
 }
 
-.team-introduce-area .main-content-area {
+.project-introduce-area .main-content-area {
   position: absolute;
   top: 40%;
   left: 10%;
@@ -177,6 +177,24 @@ body::-webkit-scrollbar {
   border-radius: 50%;
 }
 
-.team-introduce-area .main-content-area::-webkit-scrollbar {
+.project-introduce-area .main-content-area::-webkit-scrollbar {
   display: none;
+}
+
+.page-two,
+.page-three,
+.page-four,
+.page-five,
+.page-six,
+.page-seven,
+.page-eight,
+.page-nine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
