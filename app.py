@@ -11,7 +11,7 @@ db = client.dbmulbono
 
 app = Flask(__name__)
 
-# index 페이지 조회 API
+# index 페이지 조회 API (index.html 랜더링 및 팀원 소개 data)
 @app.route('/index')
 def main():
     data = list(db.members.find({},{'_id':False}))
