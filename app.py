@@ -1,19 +1,19 @@
 import json
 import requests
-from flask import Flask, jsonify, request, render_template
 from bs4 import BeautifulSoup
+from flask import Flask, jsonify, request, render_template
 from pymongo import MongoClient
+
 
 client = MongoClient('mongodb+srv://mulbono:1234@cluster0.fn6k9sb.mongodb.net/?retryWrites=true&w=majority')
 db = client.dbmulbono
 
-from flask import Flask
 app = Flask(__name__)
 
 # index 페이지 조회 API
 @app.route('/index')
 def main():
-    data = list(db.test.find({},{'_id':False}))
+    data = list(db.members.find({},{'_id':False}))
     json_data = json.dumps(data)
     return render_template('index.html', json_data=json_data)
 
