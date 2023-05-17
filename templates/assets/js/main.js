@@ -19,7 +19,7 @@ if (!isIncludesHide(welcomePage)) {
       teamIntroduceListPage.classList.add("animate__animated", "animate__heartBeat", "animate__fast");
       currentPage++;
     }, 700);
-  })
+  }, { once: true })
 }
 
 function isIncludesHide(document) {
@@ -62,8 +62,6 @@ function prevPage() {
     const prevPage = document.querySelector(pageArr[--currentPage]);
     prevPage.classList.remove("animate__fadeOutUp", "animate__heartBeat", "animate__fadeInUp");
     prevPage.classList.add("animate__animated", "animate__fadeInDown", "animate__fast");
-
-    console.log(currentPage)
   }
 }
 
@@ -74,7 +72,5 @@ function nextPage() {
     const nextPage = document.querySelector(pageArr[++currentPage]);
     nextPage.classList.remove("hide", "animate__fadeOutDown");
     nextPage.classList.add("animate__animated", "animate__fadeInUp", "animate__fast");
-
-    console.log(currentPage)
   }
 }
