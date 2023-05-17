@@ -50,7 +50,7 @@ def guestbook_post():
 
 
 # 방명록 삭제 API
-@app.route('/index/guest-book/<id>', methods=["POST"])
+@app.route('/index/guest-book/<id>', methods=["DELETE"])
 def delete_guest_book(id):
     db.guestbook.delete_one({'_id': ObjectId(id)})
     
