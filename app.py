@@ -1,3 +1,4 @@
+import json
 import requests
 from flask import Flask, jsonify, request, render_template
 from bs4 import BeautifulSoup
@@ -12,12 +13,15 @@ app = Flask(__name__)
 # index 페이지 조회 API
 @app.route('/index')
 def main():
-    return 'This is Home!'
+    data = list(db.test.find({},{'_id':False}))
+    json_data = json.dumps(data)
+    return render_template('index.html', json_data=json_data)
 
 # 방명록 조회 API
 @app.route('/index/guest-book', methods=["GET"])
 def get_guest_book():
-    return 'This is Home!'
+    guest_books = list(db.guestbook.find({},{'_id':False}))
+    return jsonify({'response':guest_books})
 
 # 방명록 작성 API
 @app.route('/index/guest-book', methods=["POST"])
