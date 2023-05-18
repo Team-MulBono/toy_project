@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/templates/assets/css/reset.css">
-  <link rel="stylesheet" href="/templates/assets/css/animate.css">
-  <link rel="stylesheet" href="/templates/assets/css/style.css">
+  <link rel="stylesheet" href="/static/assets/css/reset.css">
+  <link rel="stylesheet" href="/static/assets/css/animate.css">
+  <link rel="stylesheet" href="/static/assets/css/style.css">
   <title>mulbono</title>
 </head>
 
@@ -19,12 +19,12 @@
 
       <div class="welcome-page-area">
         <div class="item1-area">
-          <img class="item1" src="./assets/images/welcome-page-item1.jpeg" alt="외국 잼민이 짤">
-          <img class="item1-mind-speech-bubble" src="./assets/images/mind-speach-bubble.png" alt="속마음 말풍선">
+          <img class="item1" src="static/assets/images/welcome-page-item1.jpeg" alt="외국 잼민이 짤">
+          <img class="item1-mind-speech-bubble" src="static/assets/images/mind-speach-bubble.png" alt="속마음 말풍선">
           <p class="text">4<span class="point-color">조</span>의 팀 프로젝트라고? 너무 기대<span class="point-color">뒈</span>는걸!</p>
         </div>
         <div class="impact-speech-bubble-area">
-          <img class="impact-speech-bubble" src="./assets/images/impact-speech-bubble.png" alt="강조 말풍선">
+          <img class="impact-speech-bubble" src="static/assets/images/impact-speech-bubble.png" alt="강조 말풍선">
           <p class="text">초대박 사건</p>
         </div>
         <div class="start-guide-message animate__animated animate__flash animate__slower animate__infinite">
@@ -141,7 +141,7 @@
       </div>
 
       <div class="first-member-introduce-area page-six hide">
-        <img class="member-img" src="/templates/assets/images/hotping-bono.jpeg" alt="김규현 사진">
+        <img class="member-img" src="/static/assets/images/hotping-bono.jpeg" alt="김규현 사진">
         <div class="member-name-area">
           <span class="label">이름: </span>
           <span class="member-name">김규현</span>
@@ -167,7 +167,7 @@
       </div>
 
       <div class="second-member-introduce-area page-seven hide">
-        <img class="member-img" src="/templates/assets/images/green-bono.jpeg" alt="고강준 사진">
+        <img class="member-img" src="/static/assets/images/green-bono.jpeg" alt="고강준 사진">
         <div class="member-name-area">
           <span class="label">이름: </span>
           <span class="member-name">고광준</span>
@@ -195,7 +195,7 @@
         </div>
       </div>
       <div class="third-member-introduce-area page-eight hide">
-        <img class="member-img" src="/templates/assets/images/blue-bono.jpeg" alt="김동현 사진">
+        <img class="member-img" src="/static/assets/images/blue-bono.jpeg" alt="김동현 사진">
         <div class="member-name-area">
           <span class="label">이름: </span>
           <span class="member-name">김동현</span>
@@ -238,24 +238,24 @@
       <div class="comment-popup">
         <div class="content-wrapper">
           <div class="left-side">
-            <img class="title-img" src="/templates/assets/images/hotping-bono.jpeg" alt="방명록 타이틀 이미지">
+            <img class="title-img" src="/static/assets/images/hotping-bono.jpeg" alt="방명록 타이틀 이미지">
           </div>
           <div class="right-side">
             <div class="header">
-              <img class="comment-header-img" src="/templates/assets/images/blue-bono.jpeg" alt="방명록 헤더 이미지">
+              <img class="comment-header-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 헤더 이미지">
               <p class="comment-header-title">4조 멀보노 방명록</p>
             </div>
             <div class="comment-body">
               <ul class="comment-area">
                 <li class="comment-list">
-                  <img class="comment-list-img" src="/templates/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
+                  <img class="comment-list-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
                   <div class="comment-content">
                     <p class="comment-text">우와 정말 멋져요</p>
                     <p class="comment-data">2023.05.17 20:44</p>
                   </div>
                 </li>
                 <li class="comment-list">
-                  <img class="comment-list-img" src="/templates/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
+                  <img class="comment-list-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
                   <div class="comment-content">
                     <p class="comment-text">우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와
                       정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요</p>
@@ -264,13 +264,13 @@
                 </li>
               </ul>
             </div>
-            <form class="comment-form" action="/index/guest-book" method="post">
-              <div class="comment-input-area">
-                <input id="nickname_receive" class="nickname-input" type="text" placeholder="닉네임" required>
-                <input id="comment_receive" class="comment-input" type="text" placeholder="방명록 내용..." required>
-                <button class="submit-button" type="submit">입력</button>
-              </div>
-            </form>
+            
+            <div class="comment-input-area">
+              <input id="nickname_give" class="nickname-input" type="text" placeholder="닉네임" required>
+              <input id="comment_give" class="comment-input" type="text" placeholder="방명록 내용..." required>
+              <button class="submit-button" type="submit">입력</button>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -278,7 +278,7 @@
   </div>
 
 
-  <script src=" ./assets/js/main.js"></script>
+  <script src="static/assets/js/main.js"></script>
+  <script src="static/assets/js/api.js"></script>
 </body>
-
 </html>
