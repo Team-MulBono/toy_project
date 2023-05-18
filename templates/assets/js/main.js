@@ -1,6 +1,8 @@
 const welcomePage = document.querySelector(".welcome-page-area");
 const teamIntroduceListPage = document.querySelector(".page-one");
 const teamIntroducePage = document.querySelector(`.page-two`);
+const popupPage = document.querySelector(".comment-popup-area");
+const commentToggleButton = document.querySelector(`.comment-toggle-button`);
 
 const MIN_CURRENT_PAGE = 1;
 const MAX_CURRENT_PAGE = 9;
@@ -30,6 +32,10 @@ let isWheelEventActive = true;
 
 document.addEventListener("wheel", (e) => {
   if (!isWheelEventActive) {
+    return;
+  }
+
+  if (!isIncludesHide(popupPage)) {
     return;
   }
 
@@ -66,7 +72,7 @@ function prevPage() {
 }
 
 function nextPage() {
-  if (currentPage < MAX_CURRENT_PAGE) {
+  if (currentPage !== 0 && currentPage < MAX_CURRENT_PAGE) {
     const nowPage = document.querySelector(pageArr[currentPage]);
     nowPage.classList.add("animate__animated", "animate__fadeOutUp", "animate__fast");
     const nextPage = document.querySelector(pageArr[++currentPage]);
@@ -74,3 +80,13 @@ function nextPage() {
     nextPage.classList.add("animate__animated", "animate__fadeInUp", "animate__fast");
   }
 }
+
+commentToggleButton.addEventListener("click", () => {
+  popupPage.classList.remove("hide");
+})
+
+popupPage.addEventListener("click", (e) => {
+  if (e.target.className.includes("comment-popup-area")) {
+    popupPage.classList.add("hide");
+  }
+})

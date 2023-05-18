@@ -412,3 +412,113 @@ body::-webkit-scrollbar {
 .end-page-area .title:last-child {
   margin-top: 0;
 }
+
+/* comment toggle button 영역 */
+.comment-toggle-button {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+}
+
+/* comment popup 영역 */
+.comment-popup-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000c0;
+}
+
+.comment-popup-area .comment-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  border-radius: 1vw;
+  background: #fff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.comment-popup-area .content-wrapper {
+  display: flex;
+}
+
+.comment-popup-area .left-side {
+  width: 80vh;
+  height: 80vh;
+}
+
+.comment-popup-area .left-side .title-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
+
+.comment-popup-area .right-side {
+  width: calc(80vw - 80vh);
+}
+
+.comment-popup-area .right-side .header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3%;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.comment-popup-area .comment-header-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 2%;
+}
+
+.comment-popup-area .comment-header-title {
+  font-weight: bold;
+}
+
+.comment-popup-area .right-side .comment-body {
+  width: 100%;
+  height: calc(80vh - 140px);
+  overflow: scroll;
+}
+
+.comment-popup-area .right-side .comment-body::-webkit-scrollbar {
+  display: none;
+}
+
+.comment-popup-area .comment-body .comment-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-popup-area .comment-body .comment-list {
+  margin-top: 20px;
+  display: flex;
+  gap: 3%;
+}
+
+.comment-popup-area .comment-list .comment-text {
+  margin: 5px 0;
+}
+
+.comment-popup-area .comment-list .comment-list-img {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  margin-left: 2%;
+}
+
+.comment-popup-area .right-side .comment-input {
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid rgb(220, 220, 220);
+}
