@@ -1,5 +1,55 @@
+/* font */
+@font-face {
+  font-family: YangjaeWadangche;
+  src: url(/templates/assets/fonts/YangjaeWadangche.TTF) format('truetype');
+}
+
+@font-face {
+  font-family: YangjaeBaekdu;
+  src: url(/templates/assets/fonts/YangjaeBaekdu.TTF) format('truetype');
+}
+
+/* 공통영역 */
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 body::-webkit-scrollbar {
   display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.red-color {
+  color: red;
+}
+
+.orange-color {
+  color: orange;
+}
+
+.yellow-color {
+  color: yellow;
+}
+
+.green-color {
+  color: green;
+}
+
+.blue-color {
+  color: blue;
+}
+
+.indigo-color {
+  color: indigo;
+}
+
+.purple-color {
+  color: purple;
 }
 
 .welcome-page-area {
@@ -10,6 +60,43 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
 }
 
+.special-font {
+  font-family: YangjaeWadangche;
+}
+
+.member-img {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  margin: 5vh 5vw;
+  border: 0.3vw dashed #000;
+}
+
+.member-name-area,
+.member-MBTI-area,
+.member-introduce-area,
+.member-strong-point-area,
+.member-collaboration-style-area,
+.member-blog-link-area {
+  padding-left: 5vw;
+  font-size: 3vw;
+}
+
+.member-name-area .member-name,
+.member-MBTI-area .member-MBTI,
+.member-introduce-area .member-introduce,
+.member-strong-point-area .member-strong-point,
+.member-collaboration-style-area .member-collaboration-style,
+.member-blog-link-area .member-blog-link {
+  font-family: YangjaeBaekdu;
+  word-break: break-all;
+}
+
+.member-blog-link-area .member-blog-link {
+  color: blue;
+}
+
+/* welcome page 영역 */
 .welcome-page-area .item1-area .item1 {
   position: absolute;
   top: 50%;
@@ -82,7 +169,8 @@ body::-webkit-scrollbar {
   text-shadow: 3px 3px 10px #000;
 }
 
-.team-introduce-area {
+/* project introduce page 영역 */
+.project-introduce-area {
   width: 100vw;
   height: 100vh;
   background: url(../images/default-bono.jpeg);
@@ -90,6 +178,347 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
 }
 
-.team-introduce-area .team-title {
-  padding: 100px;
+.project-introduce-area .title {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 50px;
+  font-family: YangjaeWadangche;
+  font-size: 10vw;
+  white-space: nowrap;
+}
+
+.project-introduce-area .sub-title {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 50px;
+  font-family: YangjaeWadangche;
+  font-size: 3.5vw;
+  white-space: nowrap;
+}
+
+.project-introduce-area .main-content-area {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  padding: 3vw;
+  font-family: YangjaeBaekdu;
+  font-size: 4vw;
+  word-break: break-all;
+  text-align: center;
+  background-color: rgb(200, 200, 200);
+  border-radius: 50%;
+}
+
+.project-introduce-area .main-content-area::-webkit-scrollbar {
+  display: none;
+}
+
+.page-five,
+.page-six,
+.page-seven,
+.page-eight,
+.page-nine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* project introduce page 영역 */
+.team-introduce-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.team-introduce-area .title {
+  text-align: center;
+  padding-top: 5vh;
+  font-size: 7vw;
+}
+
+.team-introduce-area .main-content {
+  font-size: 8.5vw;
+  line-height: 1.04em;
+}
+
+/* team character introduce page 영역 */
+.team-character-introduce-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team-character-introduce-area .prev-text {
+  padding-top: 2vh;
+  font-size: 8.5vw;
+  line-height: 1.04em;
+}
+
+.team-character-introduce-area .title {
+  text-align: center;
+  padding-top: 5vh;
+  font-size: 6vw;
+}
+
+.team-character-introduce-area .main-content {
+  word-break: break-all;
+  padding-top: 25vh;
+  font-size: 6.5vw;
+}
+
+/* team goals introduce 영역 */
+.team-goals-introduce-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team-goals-introduce-area .title {
+  text-align: center;
+  padding-top: 5vh;
+  font-size: 6vw;
+}
+
+.team-goals-introduce-area .main-content {
+  margin: 1vw 5vw;
+  background: url(/templates/assets/images/welcome-page2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  opacity: 0.75;
+  border-radius: 10vw;
+}
+
+.team-goals-introduce-area .main-content p {
+  padding: 3vw 5vw;
+  word-break: break-all;
+  font-size: 3vw;
+}
+
+/* team rule introduce 영역 */
+.team-rule-introduce-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team-rule-introduce-area .title {
+  text-align: center;
+  padding-top: 5vh;
+  font-size: 6vw;
+}
+
+.team-rule-introduce-area .main-content {
+  background: #9400d3;
+  opacity: 0.65;
+  margin: 0 5vw;
+  border-radius: 10vw;
+}
+
+.team-rule-introduce-area .main-content .rule-text {
+  padding: 3vw 0;
+  margin: 3.5vw 13vw;
+  font-size: 3.1vw;
+  text-align: center;
+  background: #00ff00;
+  word-break: break-all;
+  border-radius: 50%;
+}
+
+/* first member introduce 영역 */
+.first-member-introduce-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/hotping-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* second member introduce 영역 */
+.second-member-introduce-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/green-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* third member introduce 영역 */
+.third-member-introduce-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/blue-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* end-page 영역 */
+.end-page-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-bono.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.end-page-area .title {
+  word-break: break-all;
+  font-size: 20vw;
+  margin-top: 15vh;
+}
+
+.end-page-area .title:last-child {
+  margin-top: 0;
+}
+
+/* comment toggle button 영역 */
+.comment-toggle-button {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+}
+
+/* comment popup 영역 */
+.comment-popup-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000c0;
+}
+
+.comment-popup-area .comment-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  border-radius: 1vw;
+  background: #fff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.comment-popup-area .content-wrapper {
+  display: flex;
+}
+
+.comment-popup-area .left-side {
+  width: 80vh;
+  height: 80vh;
+}
+
+.comment-popup-area .left-side .title-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
+
+.comment-popup-area .right-side {
+  width: calc(80vw - 80vh);
+}
+
+.comment-popup-area .right-side .header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3%;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.comment-popup-area .comment-header-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 2%;
+}
+
+.comment-popup-area .comment-header-title {
+  font-weight: bold;
+}
+
+.comment-popup-area .right-side .comment-body {
+  width: 100%;
+  height: calc(80vh - 140px);
+  overflow: scroll;
+}
+
+.comment-popup-area .right-side .comment-body::-webkit-scrollbar {
+  display: none;
+}
+
+.comment-popup-area .comment-body .comment-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-popup-area .comment-body .comment-list {
+  margin-top: 20px;
+  display: flex;
+  gap: 3%;
+}
+
+.comment-popup-area .comment-list .comment-text {
+  margin: 5px 0;
+}
+
+.comment-popup-area .comment-list .comment-list-img {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  margin-left: 2%;
+}
+
+.comment-popup-area .right-side .comment-input {
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid rgb(220, 220, 220);
 }

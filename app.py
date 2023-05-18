@@ -21,6 +21,7 @@ def main():
 
     return render_template('index.html', json_data=json_data)
 
+
 # 방명록 조회 API
 @app.route('/index/guest-book', methods=["GET"])
 def get_guest_book():
@@ -47,13 +48,32 @@ def guestbook_post():
     
     return jsonify({'msg':'방명록 작성 완료!!'})
 
+
 # 방명록 삭제 API
-@app.route('/index/guest-book/<id>', methods=["POST"])
+@app.route('/index/guest-book/<id>', methods=["DELETE"])
 def delete_guest_book(id):
     db.guestbook.delete_one({'_id': ObjectId(id)})
     
-    return jsonify({'msg':'삭제 완료!'})
+    return jsonify({'msg':'방명록 삭제 완료!'})
 
+
+# 방명록 수정 API
+@app.route('/index/guest-book/<id>', methods=["PUT"])
+def update_guest_book(id):
+    nickname = request.form.get('nickname_give')
+    comment = request.form.get('comment_give')
+
+    guest_book = db.guestbook.find_one({'_id': ObjectId(id)})
+
+    if not guest_book:
+        return jsonify({'mgs':'방명록이 존재하지 않습니다.'}), 404
+    
+    guest_book['nickname'] = nickname
+    guest_book['comment'] = comment
+
+    db.guestbook.update_one({'_id': ObjectId(id)}, {'$set': guest_book})
+    
+    return jsonify({"msg":"방명록 수정 완료!"})
 
 
 if __name__ == '__main__':  
