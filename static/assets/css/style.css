@@ -539,14 +539,14 @@ body::-webkit-scrollbar {
   margin-left: 2%;
 }
 
-.comment-popup-area .comment-form .comment-input-area {
+.comment-popup-area .comment-input-area {
   display: flex;
   width: 100%;
   height: 68px;
   border-top: 1px solid rgb(220, 220, 220);
 }
 
-.comment-form .comment-input-area .nickname-input {
+.comment-input-area .nickname-input {
   outline: none;
   border: none;
   border-right: 1px solid rgb(220, 220, 220);
@@ -554,14 +554,14 @@ body::-webkit-scrollbar {
   padding: 0 15px;
 }
 
-.comment-form .comment-input-area .comment-input {
+.comment-input-area .comment-input {
   outline: none;
   border: none;
   width: 75%;
   padding: 0 15px;
 }
 
-.comment-form .comment-input-area .submit-button {
+.comment-input-area .submit-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -577,7 +577,7 @@ body::-webkit-scrollbar {
   transition: 0.3s;
 }
 
-.comment-form .comment-input-area .submit-button:hover {
+.comment-input-area .submit-button:hover {
   color: #fff;
   background-color: rgb(77, 66, 230);
   transition: 0.3s;
