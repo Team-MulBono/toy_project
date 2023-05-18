@@ -420,6 +420,24 @@ body::-webkit-scrollbar {
   right: 1vw;
 }
 
+.comment-toggle-button button {
+  cursor: pointer;
+  font-family: YangjaeBaekdu;
+  font-size: 2.5em;
+  border: none;
+  background: transparent;
+  color: #fff;
+  text-shadow: 3px 3px 20px #ff99cc, -2px 1px 30px #ff99cc;
+  transition: 0.3s;
+  letter-spacing: 0.4em;
+}
+
+.comment-toggle-button button:hover {
+  color: #ff5eafae;
+  text-shadow: 5px 5px 20px #fff, -4px -1px 30px #fff;
+  transition: 0.3s;
+}
+
 /* comment popup 영역 */
 .comment-popup-area {
   position: fixed;
@@ -505,6 +523,10 @@ body::-webkit-scrollbar {
   gap: 3%;
 }
 
+.comment-popup-area .comment-list .comment-content {
+  padding-right: 4%;
+}
+
 .comment-popup-area .comment-list .comment-text {
   margin: 5px 0;
 }
@@ -517,8 +539,46 @@ body::-webkit-scrollbar {
   margin-left: 2%;
 }
 
-.comment-popup-area .right-side .comment-input {
+.comment-popup-area .comment-form .comment-input-area {
+  display: flex;
   width: 100%;
-  height: 70px;
+  height: 68px;
   border-top: 1px solid rgb(220, 220, 220);
+}
+
+.comment-form .comment-input-area .nickname-input {
+  outline: none;
+  border: none;
+  border-right: 1px solid rgb(220, 220, 220);
+  width: 10%;
+  padding: 0 15px;
+}
+
+.comment-form .comment-input-area .comment-input {
+  outline: none;
+  border: none;
+  width: 75%;
+  padding: 0 15px;
+}
+
+.comment-form .comment-input-area .submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 15%;
+  outline: none;
+  border: none;
+  border-left: 1px solid rgb(220, 220, 220);
+  font-weight: bold;
+  color: #333;
+  border-bottom-right-radius: 1vw;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.comment-form .comment-input-area .submit-button:hover {
+  color: #fff;
+  background-color: rgb(77, 66, 230);
+  transition: 0.3s;
 }
