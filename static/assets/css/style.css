@@ -1,12 +1,12 @@
 /* font */
 @font-face {
   font-family: YangjaeWadangche;
-  src: url(/templates/assets/fonts/YangjaeWadangche.TTF) format('truetype');
+  src: url(/static/assets/fonts/YangjaeWadangche.TTF) format('truetype');
 }
 
 @font-face {
   font-family: YangjaeBaekdu;
-  src: url(/templates/assets/fonts/YangjaeBaekdu.TTF) format('truetype');
+  src: url(/static/assets/fonts/YangjaeBaekdu.TTF) format('truetype');
 }
 
 /* 공통영역 */
@@ -306,7 +306,7 @@ body::-webkit-scrollbar {
 
 .team-goals-introduce-area .main-content {
   margin: 1vw 5vw;
-  background: url(/templates/assets/images/welcome-page2.jpeg);
+  background: url(/static/assets/images/welcome-page2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
