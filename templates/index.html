@@ -249,14 +249,14 @@
               <ul class="comment-area">
                 <li class="comment-list">
                   <img class="comment-list-img" src="/templates/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
-                  <div class="comment-centent">
+                  <div class="comment-content">
                     <p class="comment-text">우와 정말 멋져요</p>
                     <p class="comment-data">2023.05.17 20:44</p>
                   </div>
                 </li>
                 <li class="comment-list">
                   <img class="comment-list-img" src="/templates/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
-                  <div class="comment-centent">
+                  <div class="comment-content">
                     <p class="comment-text">우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와
                       정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요</p>
                     <p class="comment-data">2023.05.17 20:44</p>
@@ -264,7 +264,13 @@
                 </li>
               </ul>
             </div>
-            <div class="comment-input"></div>
+            <form class="comment-form" action="/index/guest-book" method="post">
+              <div class="comment-input-area">
+                <input id="nickname_receive" class="nickname-input" type="text" placeholder="닉네임" required>
+                <input id="comment_receive" class="comment-input" type="text" placeholder="방명록 내용..." required>
+                <button class="submit-button" type="submit">입력</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
