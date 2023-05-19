@@ -6,6 +6,7 @@ async function guest_book(){
     let res_json = await res.json()
     let res_parse = JSON.parse(res_json['response'])
 
+    $('#guest_book_list').empty();
     res_parse.forEach((data) => {
         let obj_id = data['_id']['$oid']
         let nickname = data['nickname']
@@ -26,5 +27,29 @@ async function guest_book(){
                         </div>
                         </div>
                     </li>`
+        $('#guest_book_list').append(tmp)
     });
 }
+
+// 방명록 작성 API 호출 함수
+let comment_btn = document.querySelector('.submit-button')
+comment_btn.addEventListener("click", async function write() {
+    let nickname = $('#nickname').val();
+    let comment = $('#comment').val();
+    
+    let formData = new FormData
+    formData.append('nickname_give', nickname)
+    formData.append('comment_give', comment)
+
+    let request = await fetch('/index/guest-book', {
+        method : "POST",
+        body : formData
+    })
+    let request_json = await request.json()
+    console.log(request)
+    
+    if (request['status'] == 200){
+        alert(request_json['msg'])
+        window.location.reload();
+    }
+})
