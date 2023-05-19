@@ -53,3 +53,16 @@ comment_btn.addEventListener("click", async function write() {
         window.location.reload();
     }
 })
+
+// 방명록 삭제 API 호출 함수
+async function handleDelete(id) {
+    let res = await fetch(`/index/guest-book/${id}`, {
+        method : "DELETE",
+    })
+    let res_json = await res.json()
+
+    if (res['status']==200) {
+        alert(res_json['msg']);
+        window.location.reload();
+    }
+}
