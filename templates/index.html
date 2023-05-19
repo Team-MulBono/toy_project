@@ -8,15 +8,82 @@
   <link rel="stylesheet" href="/static/assets/css/reset.css">
   <link rel="stylesheet" href="/static/assets/css/animate.css">
   <link rel="stylesheet" href="/static/assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>mulbono</title>
 </head>
+<script>
+  $(document).ready(function() {
+    var jsonData = {{ json_data|safe }};
+    console.log(jsonData)
+    
+    // member1 data
+    var name = jsonData[0]['name'];
+    $('#member1_name').text(name);
+
+    var mbti = jsonData[0]['mbti'];
+    $('#member1_mbti').text(mbti);
+
+    var intro = jsonData[0]['intro'];
+    $('#member1_intro').text(intro);
+
+    var style = jsonData[0]['style'];
+    $('#member1_style').text(style); 
+
+    var advantage = jsonData[0]['advantage'];
+    $('#member1_advantage').text(advantage);
+
+    var blog = jsonData[0]['blog'];
+    $('#member1_blog').attr("href", blog)
+    $("#member1_blog").text(blog)
+
+    // member2 data
+    var name = jsonData[1]['name'];
+    $('#member2_name').text(name);
+
+    var mbti = jsonData[1]['mbti'];
+    $('#member2_mbti').text(mbti);
+
+    var intro = jsonData[1]['intro'];
+    $('#member2_intro').text(intro);
+
+    var style = jsonData[1]['style'];
+    $('#member2_style').text(style); 
+
+    var advantage = jsonData[1]['advantage'];
+    $('#member2_advantage').text(advantage);
+
+    var blog = jsonData[1]['blog'];
+    $('#member2_blog').attr("href", blog)
+    $("#member2_blog").text(blog)
+
+    // member3 data
+    var name = jsonData[2]['name'];
+    $('#member3_name').text(name);
+
+    var mbti = jsonData[2]['mbti'];
+    $('#member3_mbti').text(mbti);
+
+    var intro = jsonData[2]['intro'];
+    $('#member3_intro').text(intro);
+
+    var style = jsonData[2]['style'];
+    $('#member3_style').text(style); 
+
+    var advantage = jsonData[2]['advantage'];
+    $('#member3_advantage').text(advantage);
+
+    var blog = jsonData[2]['blog'];
+    $('#member3_blog').attr("href", blog)
+    $("#member3_blog").text(blog)
+});
+</script>
 
 <body>
   <div class="wrapper">
+    <!-- 컨테이너 start -->
     <div class="container">
-
       <div class="window"></div>
-
+      <!-- 웰컴 페이지 start -->
       <div class="welcome-page-area">
         <div class="item1-area">
           <img class="item1" src="static/assets/images/welcome-page-item1.jpeg" alt="외국 잼민이 짤">
@@ -31,7 +98,9 @@
           시작하려면 아무키나 눌러주세요.
         </div>
       </div>
-
+      <!-- 웰컴 페이지 end -->
+      
+      <!-- 목차 start -->
       <div class="project-introduce-area page-one hide">
         <div class="title">
           <span class="red-color">4</span>
@@ -71,7 +140,9 @@
           <p>5. 팀원 소개</p>
         </div>
       </div>
-
+      <!-- 목차 end -->
+      
+      <!-- 팀 소개 start -->
       <div class="team-introduce-area page-two hide">
         <p class="special-font title">
           <span class="red-color">1</span>
@@ -84,7 +155,9 @@
           “멀티플 보노보노” 여러명의 보노보노 같은 주니어들이라는 뜻으로, 무한한 성장 가능성을 품은 개발자로 성장하기 위한 초보들이라는 의미를 가졌다.
         </p>
       </div>
-
+      <!-- 팀 소개 end -->
+      
+      <!-- 팀 특징 start -->
       <div class="team-character-introduce-area page-three hide">
         <p class="prev-text">다.</p>
         <p class="special-font title">
@@ -102,7 +175,9 @@
           아이스 아메리카노를 좋아하는 감성 있는 개발자
         </p>
       </div>
-
+      <!-- 팀 특징 end -->
+      
+      <!-- 팀 목표 start -->
       <div class="team-goals-introduce-area page-four hide">
         <p class="special-font title">
           <span class="red-color">3</span>
@@ -121,7 +196,9 @@
           <p>개발이라는 한정적인 영역이 아닌 서비스 전체를 볼 수 있는 눈을 가진 개발자가 되는 것이 궁극적인 목표입니다.</p>
         </div>
       </div>
-
+      <!-- 팀 목표 end -->
+      
+      <!-- 팀 약속 start -->
       <div class="team-rule-introduce-area page-five hide">
         <p class="special-font title">
           <span class="red-color">4</span>
@@ -139,101 +216,112 @@
           <div class="rule-text">내가 작성한 코드를 보게 될 다음 사람을 생각하자.</div>
         </div>
       </div>
+      <!-- 팀 약속 end -->
 
+      <!-- 팀원 소개 start -->
       <div class="first-member-introduce-area page-six hide">
-        <img class="member-img" src="/static/assets/images/hotping-bono.jpeg" alt="김규현 사진">
+        <img class="member-img" id="member1_img" src="/static/assets/images/member1.jpg" alt="김규현 사진">
         <div class="member-name-area">
           <span class="label">이름: </span>
-          <span class="member-name">김규현</span>
+          <span class="member-name" id="member1_name"></span>
         </div>
         <div class="member-MBTI-area">
           <span class="label">MBTI: </span>
-          <span class="member-MBTI">ESFJ</span>
+          <span class="member-MBTI" id="member1_mbti"></span>
         </div>
         <div class="member-introduce-area">
           <span class="label">소개: </span>
-          <span class="member-introduce">안녕하세요! 이노베이션 캠프 동북 2기에서 사다리를 타다가 팀장이 되어버린 백엔드 개발자 김규현입니다.</span>
+          <span class="member-introduce" id="member1_intro"></span>
+        </div>
+        <div class="member-strong-point-area">
+          <span class="label">장점: </span>
+          <span class="member-strong-point" id="member1_advantage"></span>
         </div>
         <div class="member-collaboration-style-area">
           <span class="label">협업 스타일: </span>
-          <span class="member-collaboration-style">나의 한 걸음 보다 모두의 한 걸음이 더욱 가치 있다고 생각합니다! 협업에 있어서 가장 중요한 건 소통과 존중이라
-            생각합니다</span>
+          <span class="member-collaboration-style" id="member1_style"></span>
         </div>
         <div class="member-blog-link-area">
           <span class="label">블로그 주소: </span>
-          <a class="member-blog-link" target="_blank"
-            href="https://gyuhyeon-dev-log.tistory.com/">https://gyuhyeon-dev-log.tistory.com/</a>
+          <a class="member-blog-link" target="_blank" id="member1_blog"
+            href=""></a>
         </div>
       </div>
 
       <div class="second-member-introduce-area page-seven hide">
-        <img class="member-img" src="/static/assets/images/green-bono.jpeg" alt="고강준 사진">
+        <img class="member-img" src="/static/assets/images/member2.jpg" alt="고강준 사진">
         <div class="member-name-area">
           <span class="label">이름: </span>
-          <span class="member-name">고광준</span>
+          <span class="member-name" id="member2_name"></span>
         </div>
         <div class="member-MBTI-area">
           <span class="label">MBTI: </span>
-          <span class="member-MBTI">ENFJ</span>
+          <span class="member-MBTI" id="member2_mbti"></span>
         </div>
         <div class="member-introduce-area">
           <span class="label">소개: </span>
-          <span class="member-introduce">안녕하세요..!! 고양이를 좋아하는 백앤드 개발자 고강준이라고합니다..!!</span>
+          <span class="member-introduce" id="member2_intro"></span>
         </div>
         <div class="member-strong-point-area">
           <span class="label">장점: </span>
-          <span class="member-strong-point">긍정적인 사고를 가지고있음.새로운것을 배우는걸 좋아함.</span>
+          <span class="member-strong-point" id="member2_advantage"></span>
         </div>
         <div class="member-collaboration-style-area">
           <span class="label">협업 스타일: </span>
-          <span class="member-collaboration-style">밝은 분위기를 주도함.신속한 피드백을받음.</span>
+          <span class="member-collaboration-style" id="member2_style"></span>
         </div>
         <div class="member-blog-link-area">
           <span class="label">블로그 주소: </span>
-          <a class="member-blog-link" href="https://blog.naver.com/dge05083"
-            target="_blank">https://blog.naver.com/dge05083</a>
+          <a class="member-blog-link" href="" id="member2_blog"
+            target="_blank"></a>
         </div>
       </div>
       <div class="third-member-introduce-area page-eight hide">
-        <img class="member-img" src="/static/assets/images/blue-bono.jpeg" alt="김동현 사진">
+        <img class="member-img" src="/static/assets/images/member3.JPG" alt="김동현 사진">
         <div class="member-name-area">
           <span class="label">이름: </span>
-          <span class="member-name">김동현</span>
+          <span class="member-name" id="member3_name"></span>
         </div>
         <div class="member-MBTI-area">
           <span class="label">MBTI: </span>
-          <span class="member-MBTI">INFP</span>
+          <span class="member-MBTI" id="member3_mbti"></span>
         </div>
         <div class="member-introduce-area">
           <span class="label">소개: </span>
-          <span class="member-introduce">안녕하세요~ 백엔드 개발자가 되고 싶은 긴머리 남자 김동현이라고 합니다!</span>
+          <span class="member-introduce" id="member3_intro"></span>
         </div>
         <div class="member-strong-point-area">
           <span class="label">장점: </span>
-          <span class="member-strong-point">오류를 해결하기 위해 상당히 오랜시간 고민할 수 있음</span>
+          <span class="member-strong-point" id="member3_advantage"></span>
         </div>
         <div class="member-collaboration-style-area">
           <span class="label">협업 스타일: </span>
-          <span class="member-collaboration-style">적극적으로 건의하고 수용함</span>
+          <span class="member-collaboration-style" id="member3_style"></span>
         </div>
         <div class="member-blog-link-area">
           <span class="label">블로그 주소: </span>
-          <a class="member-blog-link" target="_blank"
-            href="https://princeton.tistory.com/">https://princeton.tistory.com/</a>
+          <a class="member-blog-link" target="_blank" id="member3_blog" 
+            href=""></a>
         </div>
       </div>
+      <!-- 팀원 소개 end -->
 
+      <!-- 엔딩 페이지 start -->
       <div class="end-page-area page-nine hide">
         <p class="title special-font">감사합니다</p>
         <p class="title no-padding special-font">!</p>
       </div>
-
+      <!-- 엔딩 페이지 end -->
     </div>
+    <!-- 컨테이너 end -->
 
+    <!-- 방명록 팝업 버튼 start -->
     <div class="comment-toggle-button">
-      <button>방명록</button>
+      <button onclick="guest_book()">방명록</button>
     </div>
+    <!-- 방명록 팝업 버튼 end -->
 
+    <!-- 방명록 팝업 start -->
     <div class="comment-popup-area hide">
       <div class="comment-popup">
         <div class="content-wrapper">
@@ -245,40 +333,30 @@
               <img class="comment-header-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 헤더 이미지">
               <p class="comment-header-title">4조 멀보노 방명록</p>
             </div>
+            <!-- 방명록 목록 start -->
             <div class="comment-body">
-              <ul class="comment-area">
-                <li class="comment-list">
-                  <img class="comment-list-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
-                  <div class="comment-content">
-                    <p class="comment-text">우와 정말 멋져요</p>
-                    <p class="comment-data">2023.05.17 20:44</p>
-                  </div>
-                </li>
-                <li class="comment-list">
-                  <img class="comment-list-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
-                  <div class="comment-content">
-                    <p class="comment-text">우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와
-                      정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요</p>
-                    <p class="comment-data">2023.05.17 20:44</p>
-                  </div>
-                </li>
+              <ul class="comment-area" id="guest_book_list">
               </ul>
             </div>
+            <!-- 방명록 목록 end -->
             
+            <!-- 방명록 작성 form start-->
             <div class="comment-input-area">
-              <input id="nickname_give" class="nickname-input" type="text" placeholder="닉네임" required>
-              <input id="comment_give" class="comment-input" type="text" placeholder="방명록 내용..." required>
+              <input id="nickname" class="nickname-input" type="text" placeholder="닉네임" required>
+              <input id="comment" class="comment-input" type="text" placeholder="방명록 내용..." required>
               <button class="submit-button" type="submit">입력</button>
             </div>
-            
+            <!-- 방명록 작성 form end -->
           </div>
         </div>
       </div>
     </div>
+    <!-- 방명록 팝업 end -->
   </div>
 
 
   <script src="static/assets/js/main.js"></script>
   <script src="static/assets/js/api.js"></script>
 </body>
+
 </html>

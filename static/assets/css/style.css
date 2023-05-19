@@ -1,12 +1,12 @@
 /* font */
 @font-face {
   font-family: YangjaeWadangche;
-  src: url(/templates/assets/fonts/YangjaeWadangche.TTF) format('truetype');
+  src: url(/static/assets/fonts/YangjaeWadangche.TTF) format('truetype');
 }
 
 @font-face {
   font-family: YangjaeBaekdu;
-  src: url(/templates/assets/fonts/YangjaeBaekdu.TTF) format('truetype');
+  src: url(/static/assets/fonts/YangjaeBaekdu.TTF) format('truetype');
 }
 
 /* 공통영역 */
@@ -306,7 +306,7 @@ body::-webkit-scrollbar {
 
 .team-goals-introduce-area .main-content {
   margin: 1vw 5vw;
-  background: url(/templates/assets/images/welcome-page2.jpeg);
+  background: url(/static/assets/images/welcome-page2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -581,4 +581,44 @@ body::-webkit-scrollbar {
   color: #fff;
   background-color: rgb(77, 66, 230);
   transition: 0.3s;
+}
+
+.comment-popup-area .comment-list .comment-username {
+  color: #333;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.comment-info {
+  margin-top: 5px;
+  display: flex;
+  gap: 3px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.comment-info .modify-comment,
+.comment-info .delete-comment {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.comment-info .modify-comment {
+  margin-left: 8px;
+}
+
+.comment-info .modify-comment:hover {
+  color: #0909db;
+  transition: 0.2s;
+  scale: 1.2;
+}
+
+.comment-info .delete-comment:hover {
+  color: #cb3333;
+  transition: 0.2s;
+  scale: 1.2;
 }
