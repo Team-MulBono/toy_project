@@ -301,7 +301,7 @@
     </div>
 
     <div class="comment-toggle-button">
-      <button>방명록</button>
+      <button onclick="guest_book()">방명록</button>
     </div>
 
     <div class="comment-popup-area hide">
@@ -316,31 +316,16 @@
               <p class="comment-header-title">4조 멀보노 방명록</p>
             </div>
             <div class="comment-body">
-              <ul class="comment-area">
-                <li class="comment-list">
-                  <img class="comment-list-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
-                  <div class="comment-content">
-                    <p class="comment-text">우와 정말 멋져요</p>
-                    <p class="comment-data">2023.05.17 20:44</p>
-                  </div>
-                </li>
-                <li class="comment-list">
-                  <img class="comment-list-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
-                  <div class="comment-content">
-                    <p class="comment-text">우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와
-                      정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요우와 정말 멋져요</p>
-                    <p class="comment-data">2023.05.17 20:44</p>
-                  </div>
-                </li>
+              <ul class="comment-area" id="guest_book_list">
+
               </ul>
             </div>
-
+            <!-- 방명록 작성 -->
             <div class="comment-input-area">
               <input id="nickname_give" class="nickname-input" type="text" placeholder="닉네임" required>
               <input id="comment_give" class="comment-input" type="text" placeholder="방명록 내용..." required>
               <button class="submit-button" type="submit">입력</button>
             </div>
-
           </div>
         </div>
       </div>
