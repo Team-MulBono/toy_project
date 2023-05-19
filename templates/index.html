@@ -80,10 +80,10 @@
 
 <body>
   <div class="wrapper">
+    <!-- 컨테이너 start -->
     <div class="container">
-
       <div class="window"></div>
-
+      <!-- 웰컴 페이지 start -->
       <div class="welcome-page-area">
         <div class="item1-area">
           <img class="item1" src="static/assets/images/welcome-page-item1.jpeg" alt="외국 잼민이 짤">
@@ -98,7 +98,9 @@
           시작하려면 아무키나 눌러주세요.
         </div>
       </div>
-
+      <!-- 웰컴 페이지 end -->
+      
+      <!-- 목차 start -->
       <div class="project-introduce-area page-one hide">
         <div class="title">
           <span class="red-color">4</span>
@@ -138,7 +140,9 @@
           <p>5. 팀원 소개</p>
         </div>
       </div>
-
+      <!-- 목차 end -->
+      
+      <!-- 팀 소개 start -->
       <div class="team-introduce-area page-two hide">
         <p class="special-font title">
           <span class="red-color">1</span>
@@ -151,7 +155,9 @@
           “멀티플 보노보노” 여러명의 보노보노 같은 주니어들이라는 뜻으로, 무한한 성장 가능성을 품은 개발자로 성장하기 위한 초보들이라는 의미를 가졌다.
         </p>
       </div>
-
+      <!-- 팀 소개 end -->
+      
+      <!-- 팀 특징 start -->
       <div class="team-character-introduce-area page-three hide">
         <p class="prev-text">다.</p>
         <p class="special-font title">
@@ -169,7 +175,9 @@
           아이스 아메리카노를 좋아하는 감성 있는 개발자
         </p>
       </div>
-
+      <!-- 팀 특징 end -->
+      
+      <!-- 팀 목표 start -->
       <div class="team-goals-introduce-area page-four hide">
         <p class="special-font title">
           <span class="red-color">3</span>
@@ -188,7 +196,9 @@
           <p>개발이라는 한정적인 영역이 아닌 서비스 전체를 볼 수 있는 눈을 가진 개발자가 되는 것이 궁극적인 목표입니다.</p>
         </div>
       </div>
-
+      <!-- 팀 목표 end -->
+      
+      <!-- 팀 약속 start -->
       <div class="team-rule-introduce-area page-five hide">
         <p class="special-font title">
           <span class="red-color">4</span>
@@ -206,7 +216,9 @@
           <div class="rule-text">내가 작성한 코드를 보게 될 다음 사람을 생각하자.</div>
         </div>
       </div>
+      <!-- 팀 약속 end -->
 
+      <!-- 팀원 소개 start -->
       <div class="first-member-introduce-area page-six hide">
         <img class="member-img" id="member1_img" src="/static/assets/images/member1.jpg" alt="김규현 사진">
         <div class="member-name-area">
@@ -292,18 +304,24 @@
             href=""></a>
         </div>
       </div>
+      <!-- 팀원 소개 end -->
 
+      <!-- 엔딩 페이지 start -->
       <div class="end-page-area page-nine hide">
         <p class="title special-font">감사합니다</p>
         <p class="title no-padding special-font">!</p>
       </div>
-
+      <!-- 엔딩 페이지 end -->
     </div>
+    <!-- 컨테이너 end -->
 
+    <!-- 방명록 팝업 버튼 start -->
     <div class="comment-toggle-button">
       <button onclick="guest_book()">방명록</button>
     </div>
+    <!-- 방명록 팝업 버튼 end -->
 
+    <!-- 방명록 팝업 start -->
     <div class="comment-popup-area hide">
       <div class="comment-popup">
         <div class="content-wrapper">
@@ -315,21 +333,25 @@
               <img class="comment-header-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 헤더 이미지">
               <p class="comment-header-title">4조 멀보노 방명록</p>
             </div>
+            <!-- 방명록 목록 start -->
             <div class="comment-body">
               <ul class="comment-area" id="guest_book_list">
-
               </ul>
             </div>
-            <!-- 방명록 작성 -->
+            <!-- 방명록 목록 end -->
+            
+            <!-- 방명록 작성 form start-->
             <div class="comment-input-area">
               <input id="nickname" class="nickname-input" type="text" placeholder="닉네임" required>
               <input id="comment" class="comment-input" type="text" placeholder="방명록 내용..." required>
               <button class="submit-button" type="submit">입력</button>
             </div>
+            <!-- 방명록 작성 form end -->
           </div>
         </div>
       </div>
     </div>
+    <!-- 방명록 팝업 end -->
   </div>
 
 

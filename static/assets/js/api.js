@@ -12,7 +12,6 @@ async function guest_book(){
         let nickname = data['nickname']
         let comment = data['comment']
         let time = data['time']
-        console.log(obj_id, nickname, comment, time)
         
         let tmp = `<li class="comment-list">
                         <img class="comment-list-img" src="/static/assets/images/blue-bono.jpeg" alt="방명록 댓글 이미지">
@@ -46,7 +45,6 @@ comment_btn.addEventListener("click", async function write() {
         body : formData
     })
     let request_json = await request.json()
-    console.log(request)
     
     if (request['status'] == 200){
         alert(request_json['msg'])
@@ -64,5 +62,29 @@ async function handleDelete(id) {
     if (res['status']==200) {
         alert(res_json['msg']);
         window.location.reload();
+    }
+}
+
+// 방명록 수정 API 호출 함수
+async function handleUpdate(id){
+    let nickname = $('#nickname').val()
+    let comment = $('#comment').val()
+
+    let formData = new FormData()
+    formData.append("nickname_give", nickname)
+    formData.append("comment_give", comment)
+
+    let res = await fetch(`/index/guest-book/${id}`, {
+        method : "PUT",
+        body : formData
+    })
+    let res_json = await res.json()
+
+    if (res['status']==200){
+        alert(res_json['msg'])
+        window.location.reload()
+    } else if (res['status']==404){
+        alert(res_json['msg'])
+        window.location.reload()
     }
 }
