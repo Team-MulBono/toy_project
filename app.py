@@ -1,6 +1,4 @@
 import json
-import requests
-from bs4 import BeautifulSoup
 from flask import Flask, jsonify, request, render_template
 from pymongo import MongoClient
 import datetime as dt
@@ -14,7 +12,7 @@ app = Flask(__name__)
 
 
 # index 페이지 조회 API (index.html 랜더링 및 팀원 소개 data)
-@app.route('/index')
+@app.route('/')
 def main():
     data = list(db.members.find({},{'_id':False}))
     json_data = json.dumps(data)
@@ -23,7 +21,7 @@ def main():
 
 
 # 방명록 조회 API
-@app.route('/index/guest-book', methods=["GET"])
+@app.route('/guest-book', methods=["GET"])
 def get_guest_book():
     guest_books = list(db.guestbook.find())
     json_data = dumps(guest_books, default=str)
@@ -31,7 +29,7 @@ def get_guest_book():
     return jsonify({'response':json_data})
 
 # 방명록 작성 API
-@app.route("/index/guest-book", methods=["POST"])
+@app.route("/guest-book", methods=["POST"])
 def guestbook_post():
     time = dt.datetime.now()
 
@@ -50,7 +48,7 @@ def guestbook_post():
 
 
 # 방명록 삭제 API
-@app.route('/index/guest-book/<id>', methods=["DELETE"])
+@app.route('/guest-book/<id>', methods=["DELETE"])
 def delete_guest_book(id):
     db.guestbook.delete_one({'_id': ObjectId(id)})
     
@@ -58,7 +56,7 @@ def delete_guest_book(id):
 
 
 # 방명록 수정 API
-@app.route('/index/guest-book/<id>', methods=["PUT"])
+@app.route('/guest-book/<id>', methods=["PUT"])
 def update_guest_book(id):
     nickname = request.form.get('nickname_give')
     comment = request.form.get('comment_give')

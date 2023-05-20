@@ -1,6 +1,6 @@
 // 방명록 조회 API 호출 함수
 async function guest_book(){
-    let res = await fetch('/index/guest-book',{
+    let res = await fetch('/guest-book',{
         method : "GET",
     })
     let res_json = await res.json()
@@ -40,7 +40,7 @@ comment_btn.addEventListener("click", async function write() {
     formData.append('nickname_give', nickname)
     formData.append('comment_give', comment)
 
-    let request = await fetch('/index/guest-book', {
+    let request = await fetch('/guest-book', {
         method : "POST",
         body : formData
     })
@@ -54,7 +54,7 @@ comment_btn.addEventListener("click", async function write() {
 
 // 방명록 삭제 API 호출 함수
 async function handleDelete(id) {
-    let res = await fetch(`/index/guest-book/${id}`, {
+    let res = await fetch(`/guest-book/${id}`, {
         method : "DELETE",
     })
     let res_json = await res.json()
@@ -74,7 +74,7 @@ async function handleUpdate(id){
     formData.append("nickname_give", nickname)
     formData.append("comment_give", comment)
 
-    let res = await fetch(`/index/guest-book/${id}`, {
+    let res = await fetch(`/guest-book/${id}`, {
         method : "PUT",
         body : formData
     })
